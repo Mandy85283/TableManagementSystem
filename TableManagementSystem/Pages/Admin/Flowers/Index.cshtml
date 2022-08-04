@@ -1,0 +1,36 @@
+﻿@page
+@model TableManagementSystem.Pages.Admin.Flowers.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Flowers</h1>
+
+<p>
+    <a class="btn-primary set-button" asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.flowers[0].Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.flowers) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                <a class="btn-success set-button" asp-page="./Edit" asp-route-id="@item.FlowerId">Edit</a> |
+                <a class="btn-primary set-button" asp-page="./Details" asp-route-id="@item.FlowerId">Details</a> |
+                <a class="btn-danger set-button" asp-page="./Delete" asp-route-id="@item.FlowerId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
