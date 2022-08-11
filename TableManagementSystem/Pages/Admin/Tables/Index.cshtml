@@ -1,0 +1,42 @@
+﻿@page
+@model TableManagementSystem.Pages.Admin.Tables.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Tables</h1>
+
+<p>
+    <a class="btn-primary set-button" asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.tables[0].TableName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tables[0].No_Of_Person)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.tables) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TableName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.No_Of_Person)
+            </td>
+            <td>
+                <a class="btn-success set-button" asp-page="./Edit" asp-route-id="@item.TableId">Edit</a> |
+                <a class="btn-primary set-button" asp-page="./Details" asp-route-id="@item.TableId">Details</a> |
+                <a class="btn-danger set-button" asp-page="./Delete" asp-route-id="@item.TableId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
