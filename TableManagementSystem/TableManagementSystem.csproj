@@ -10,6 +10,14 @@
     <Compile Remove="Data\ApplicationDbContext.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Pages\Admin\Booking\Create.cshtml" />
+    <None Include="Pages\Admin\Booking\Delete.cshtml" />
+    <None Include="Pages\Admin\Booking\Details.cshtml" />
+    <None Include="Pages\Admin\Booking\Edit.cshtml" />
+    <None Include="Pages\Admin\Booking\Index.cshtml" />
+  </ItemGroup>
+
 	<ItemGroup>
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.12" />

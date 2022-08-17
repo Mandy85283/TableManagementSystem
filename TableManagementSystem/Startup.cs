@@ -38,6 +38,7 @@ namespace TableManagementSystem
             services.AddScoped<ITablePosition, TablesPositionService>();
             services.AddScoped<IMeal, MealService>();
             services.AddScoped<IGuest, GuestService>();
+            services.AddScoped<IBooking, BookingService>();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

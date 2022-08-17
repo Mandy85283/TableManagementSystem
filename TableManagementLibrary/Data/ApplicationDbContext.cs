@@ -12,6 +12,7 @@ namespace TableManagementLibrary.Data
         public DbSet<foodType> FoodType { get; set; }
         public DbSet<flowers> Flowers { get; set; }
         public DbSet<tables> Tables { get; set; }
+        public DbSet<bookingTable> BookingTable { get; set; }
         public DbSet<tablePosition> tablePosition { get; set; }
         public DbSet<meal> Meal { get; set; }
         public DbSet<guest> Guests { get; set; }
